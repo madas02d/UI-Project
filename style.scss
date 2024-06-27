@@ -64,8 +64,9 @@ img{
 
 .video-player{
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     background-color: rgb(27, 26, 26);
+    @include flexSetup;
     
 }
 .latest{
@@ -130,8 +131,12 @@ img{
         @include flexbetween;
         flex-wrap: wrap;
         gap: 5px;
+        .image{
+            width: 300px;
+            background-color: aqua;
+        }
         .date {
-            width:10%;
+            width:100px;
             // background-color: antiquewhite;
             font-size: x-large;
             text-align: center;
@@ -141,7 +146,7 @@ img{
             }
         }
         .text{
-            width: 50%;
+            width: 400px;
             // background-color: rgb(183, 187, 186);
             @include flexcolumcenter;
             

@@ -66,8 +66,12 @@ img {
 
 .video-player {
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   background-color: rgb(27, 26, 26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 .latest {
@@ -146,8 +150,12 @@ img {
   flex-wrap: wrap;
   gap: 5px;
 }
+.recent-news .recent .image {
+  width: 300px;
+  background-color: aqua;
+}
 .recent-news .recent .date {
-  width: 10%;
+  width: 100px;
   font-size: x-large;
   text-align: center;
   font-weight: bold;
@@ -156,7 +164,7 @@ img {
   font-size: 4rem;
 }
 .recent-news .recent .text {
-  width: 50%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
