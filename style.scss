@@ -1,0 +1,242 @@
+@import "./mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    
+}
+body{
+    width: 100vw;
+    height: auto;
+    // background-color: rgb(27, 26, 26);
+    position: relative;
+    } 
+    main{
+        background-color: rgb(27, 26, 26);
+    }
+.menu{
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    // background-color: antiquewhite;
+    position: sticky;
+     top:50px;
+     z-index: 2;
+     background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5));
+      
+    div{
+        @include flexbetween;
+        height: 100px;
+    h1{
+        color: white;
+    }
+    ul{
+        list-style: none;
+        @include flexbetween;
+        gap: 20px;
+        li a{
+            text-decoration: none;
+            color: blue;
+            font-size: larger;
+            
+        }
+        a:hover{
+            color: rgb(115, 115, 177);
+            text-decoration: underline;
+        }
+    }
+   }
+ }
+ .carousel{
+    top: -50px;
+    z-index: 1;
+    background-color: rgb(27, 26, 26);
+ }
+img{
+    object-fit: cover;
+}
+
+.video-player{
+    width: 100%;
+    padding-bottom: 100px;
+    background-color: rgb(27, 26, 26);
+    
+}
+.latest{
+    @include flexSetup;
+    gap: 10px;
+    background-color: rgb(27, 26, 26);
+    h1{
+        color: white;
+    }
+    h2{
+        color: rgb(163, 221, 204);
+    }
+}
+.recent-news{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(./images/11.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    color: rgb(250, 249, 249);
+    background-attachment: fixed;
+    border-bottom: 1px solid rgb(80, 78, 78);
+    .contain{
+        display: flex;
+        width: 80%;
+        // height: 60vh;
+        // background-color: aquamarine;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .left-side{
+        width: 40%;
+        // border: 1px solid;
+        @include flexcolumstart;
+        .left-text{
+            @include flexcolumstart;
+        }
+    }
+    .right-side{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+    .main-title{
+        @include flexbetween;
+    }
+    .title{
+        @include flexstart;
+        h1{
+            font-size: x-large;
+        }
+        h2{
+            font-size: larger;
+        }
+    }
+    .recent{
+        @include flexbetween;
+        flex-wrap: wrap;
+        gap: 5px;
+        .date {
+            width:10%;
+            // background-color: antiquewhite;
+            font-size: x-large;
+            text-align: center;
+            font-weight: bold;
+            .blog-date-day{
+                font-size: 4rem;
+            }
+        }
+        .text{
+            width: 50%;
+            // background-color: rgb(183, 187, 186);
+            @include flexcolumcenter;
+            
+        }
+    }
+}
+.latest-videos{
+    background-color: rgb(27, 26, 26);
+    padding: 30px;
+    padding-bottom: 40px;
+    .videos{
+        gap: 10px;
+    }
+    .latest-id{
+        @include flexSetup;
+        gap: 10px;
+        h1{
+            color: white;
+        }
+        h2{
+            color: rgb(163, 221, 204);
+        }
+    }
+}
+footer{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(./images/13.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    color: rgb(250, 249, 249);
+    background-attachment: fixed;
+    padding: 30px;
+    border: 2px  ;
+    .main-div{
+        // border: 1px solid;
+        @include flexSetup ;
+        gap: 20px;
+        .search{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        form{
+            width: 50% ;
+            display: flex ;
+            flex-flow: column nowrap ;
+            // border: 1px solid ;
+        }
+
+        form h4, h3{
+            margin: 0.7rem 0 0.2rem 0 ;
+        }
+
+        input, textarea, .submit-btn{
+            padding: .5rem ;
+            border: 1px solid rgba(128, 128, 128, 0.65) ;
+        }
+
+        .btn{
+            width: 10rem;
+            margin-top: 0.5rem;
+            background: none;
+            background-color: rgb(58, 128, 58);
+            color: white;
+        }
+       
+    } 
+    .search span{
+        display: inline;
+        width: 100%;
+        
+    }
+    .icons{
+        display: flex;
+        gap: 30px;
+         a{
+            color: rgb(83, 80, 80);
+        }
+         a:hover{
+            color: blue;
+         }
+    } 
+
+    .copyright{
+        font-size: larger ;
+        text-align: center ;
+        font-weight: lighter;
+        font-style: italic;
+        border-bottom: 1px solid white;
+     }
+}

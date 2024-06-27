@@ -1,0 +1,29 @@
+@mixin flexSetup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+@mixin flexstart{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+}
+@mixin flexbetween{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+@mixin flexcolumcenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+@mixin flexcolumstart{
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    gap: 20px;padding-right: 60px;
+}
